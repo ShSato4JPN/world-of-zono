@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "react-hooks/exhaustive-deps": [
+      "error",
+      {
+        "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+      }
+    ]
+  }
+}
