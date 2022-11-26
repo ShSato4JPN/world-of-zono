@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "eslint": "eslint src",
-    "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "13.0.0",
