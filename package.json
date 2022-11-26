@@ -28,7 +28,7 @@
     "husky": "8.0.2",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
-    "stylelint": "14.14.1",
+    "stylelint": "14.15.0",
     "stylelint-config-css-modules": "4.1.0",
     "stylelint-config-prettier-scss": "0.0.1",
     "stylelint-config-standard-scss": "6.1.0",
