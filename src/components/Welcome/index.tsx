@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./style.module.css";
+import styles from "./style.module.scss";
 
 function Welcome() {
   return (
