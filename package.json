@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "eslint": "eslint src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
   },
   "dependencies": {
     "next": "13.0.6",
@@ -23,6 +24,8 @@
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
     "@typescript-eslint/eslint-plugin": "5.42.0",
+    "contentful-management": "10.22.0",
+    "contentful-typescript-codegen": "3.3.0",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "eslint-config-prettier": "8.5.0",
