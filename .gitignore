@@ -4,5 +4,11 @@
 # next.js
 .next
 
+# local env files
+.env.local
+
 # dev tools
 .vscode
+
+# contentful-typescript-codegen
+@types

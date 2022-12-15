@@ -1,5 +1,6 @@
 {
   "root": true,
+  "ignorePatterns": ["getContentfulEnvironment.js"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
