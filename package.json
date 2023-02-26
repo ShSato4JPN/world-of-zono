@@ -12,11 +12,16 @@
     "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
   },
   "dependencies": {
+    "@next/font": "13.2.1",
     "axios": "1.2.1",
     "next": "13.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "1.57.1"
+    "react-infinite-scroll-component": "6.1.0",
+    "react-loader-spinner": "5.3.4",
+    "react-markdown": "8.0.5",
+    "sass": "1.57.1",
+    "swr": "2.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",
