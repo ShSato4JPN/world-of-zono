@@ -1,0 +1,12 @@
+@use "breakpoint" as *;
+
+@mixin mq($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin narrow-content {
+  max-width: 960px;
+  width: 100%;
+}
