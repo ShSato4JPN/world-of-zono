@@ -10,7 +10,8 @@ async function getEntries(): Promise<GetEntriesData> {
         limit: 5,
         order: "-fields.publishedAt",
       },
-    })
+    }),
+    { cache: "no-store" }
   );
 
   return res.json();
