@@ -9,12 +9,14 @@
     "lint": "next lint",
     "eslint": "eslint src",
     "prepare": "husky install",
-    "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts --namespace Contentful",
+    "prebuild": "npm run contentful-typescript-codegen"
   },
   "dependencies": {
     "@next/font": "13.2.1",
     "axios": "1.2.1",
     "next": "13.2.1",
+    "query-string": "8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-infinite-scroll-component": "6.1.0",
