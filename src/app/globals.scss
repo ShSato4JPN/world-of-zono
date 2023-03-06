@@ -1,0 +1,44 @@
+:root {
+  // Brand Colors
+  --color-brand-blue: #edeef1;
+  --color-brand-red: #b33e5c;
+
+  // Neutral Colors
+  --color-deep-blue: #151529f9;
+  --color-blue: #609dc9f9;
+  --color-gray: #a0a0a0;
+  --color-light-white: #fff;
+  --color-white: #dce7ed;
+  --until-tablet-font-size: 56.25%;
+  --from-desktop-font-size: 62.5%;
+}
+
+html {
+  @media screen and (max-width: 980px) {
+    font-size: var(--until-tablet-font-size);
+  }
+  @media screen and (min-width: 980px) {
+    font-size: var(--from-desktop-font-size);
+  }
+}
+
+body {
+  background: var(--color-deep-blue);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+* {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
