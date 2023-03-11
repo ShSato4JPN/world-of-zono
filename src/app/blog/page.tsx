@@ -1,10 +1,12 @@
 import { GetEntriesData } from "app/api/entries/route";
 import queryString from "query-string";
+import BlogTop from "components/BlogTop";
+import SwrConfig from "components/SwrConfig";
 
 async function getEntries(): Promise<GetEntriesData> {
   const res = await fetch(
     queryString.stringifyUrl({
-      url: `${process.env.URL}/api/entries`,
+      url: `${process.env.NEXT_PUBLIC_URL}/api/entries`,
       query: {
         skip: 0,
         limit: 5,
@@ -19,9 +21,12 @@ async function getEntries(): Promise<GetEntriesData> {
 
 async function Page() {
   const data = await getEntries();
-  console.dir(data.items);
 
-  return <div>aaa</div>;
+  return (
+    <SwrConfig value={{ fallbackData: [data] }}>
+      <BlogTop />
+    </SwrConfig>
+  );
 }
 
 export default Page;
