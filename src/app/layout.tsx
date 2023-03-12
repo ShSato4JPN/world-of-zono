@@ -1,4 +1,3 @@
-"use client";
 import "./globals.scss";
 import SwrConfig from "components/SwrConfig";
 import { ReactNode } from "react";
