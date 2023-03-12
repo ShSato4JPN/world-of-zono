@@ -1,13 +1,13 @@
 import "./globals.scss";
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import SwrConfig from "components/SwrConfig";
+import { ReactNode } from "react";
+import fetcher from "libs/fetcehr";
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <SwrConfig value={{ fetcher }}>{children}</SwrConfig>
+      </body>
     </html>
   );
 }
