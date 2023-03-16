@@ -5,15 +5,15 @@ export type GetEntryData = Entry<Contentful.IEntryWorldOfZonoFields>;
 
 type ApiProps = {
   params: {
-    id: string;
+    entryId: string;
   };
 };
 
 export async function GET(
   _: Request,
-  { params: { id } }: ApiProps
+  { params: { entryId } }: ApiProps
 ): Promise<Response> {
-  const entry = await client.getEntry<GetEntryData>(id);
+  const entry = await client.getEntry<GetEntryData>(entryId);
 
   return new Response(JSON.stringify(entry));
 }

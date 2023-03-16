@@ -1,30 +1,27 @@
 "use client";
 import useSWR from "swr";
-import { Fragment, useMemo } from "react";
-import { GetEntryData } from "app/api/entries/[id]/route";
+import { useMemo } from "react";
+import { GetEntryData } from "app/api/entries/[entryId]/route";
 import styles from "./style.module.scss";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import { format, parseISO } from "date-fns";
 
 type BlogEntryProps = {
-  id: string;
+  entryId: string;
 };
 
-function BlogEntry({ id }: BlogEntryProps): JSX.Element {
+function BlogEntry({ entryId }: BlogEntryProps): JSX.Element {
   const { data } = useSWR<GetEntryData>(
-    `${process.env.NEXT_PUBLIC_URL}/api/entries/${id}`
+    `${process.env.NEXT_PUBLIC_URL}/api/entries/${entryId}`
   );
 
   const categoryItems = useMemo(
     () =>
-      data?.fields.category.map((name, index) => (
-        <Fragment key={index}>
-          <Link className={styles.anchor} href={`/category/${name}`}>
-            <div className={styles.categoryItem} key={index}>
-              {name}
-            </div>
-          </Link>
-        </Fragment>
+      data?.fields.category.map((name) => (
+        <Link className={styles.anchor} href={`/category/${name}`} key={name}>
+          <div className={styles.categoryItem}>{name}</div>
+        </Link>
       )) || [],
     [data]
   );
@@ -35,7 +32,7 @@ function BlogEntry({ id }: BlogEntryProps): JSX.Element {
         <article>
           <div className={styles.title}>{data.fields.title}</div>
           <div className={styles.publishedAt}>
-            {data.fields.publishedAt.slice(0, 10)}
+            {format(parseISO(data.fields.publishedAt), "yyyy-MM-dd")}
           </div>
           <div className={styles.categoryies}>{categoryItems}</div>
           <div className={styles.body}>
