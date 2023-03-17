@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  max-width: 960px;
+  width: 100%;
+  padding: 10px;
+}
+
+.categoryies {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+.categoryItem {
+  padding: 5px 8px;
+  margin-right: 5px;
+  border-radius: 12px;
+  border: 1px solid var(--color-blue);
+  background-color: #4e9fd545;
+}
+
+.title {
+  padding: 10px 0;
+  font-size: 2.5rem;
+  color: var(--color-light-white);
+}
+
+.body {
+  padding: 10px 0;
+  line-height: 3rem;
+  font-size: 1.7rem;
+  color: var(--color-gray);
+}
+
+.publishedAt {
+  font-size: 1.5rem;
+  color: var(--color-gray);
+}
+
+.browserBack {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  color: var(--color-blue);
+  text-align: center;
+}
