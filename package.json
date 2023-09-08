@@ -40,7 +40,7 @@
     "eslint-config-next": "13.0.7",
     "eslint-config-prettier": "8.5.0",
     "husky": "8.0.2",
-    "lint-staged": "13.1.0",
+    "lint-staged": "14.0.1",
     "prettier": "2.8.1",
     "stylelint": "14.16.0",
     "stylelint-config-css-modules": "4.1.0",
