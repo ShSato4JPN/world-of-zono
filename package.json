@@ -34,7 +34,7 @@
     "@types/react-dom": "18.0.9",
     "@typescript-eslint/eslint-plugin": "5.47.0",
     "contentful": "9.2.17",
-    "contentful-management": "10.25.0",
+    "contentful-management": "11.35.1",
     "contentful-typescript-codegen": "3.4.0",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
